@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Storage Exercise</title>
+  <style>
+    table,tr,th,td{
+      border: 1px solid black; border-collapse:collapse ;
+    }
+    table{
+      margin: auto;
+    }
+    .table-head{
+     width:150px;
+    }
+    .table-data{
+      width: 150px;
+    }
+    #data{
+      width: 50%; margin: auto; min-height: 300px; background-color: rgb(230, 225, 219); text-align: center;
+    }
+    button{
+      margin: 10px 0px;
+    }
+    input{
+      margin: 10px 0px;
+    }
+    @media screen and (max-width:690px) {
+      #data{
+        width: 80%;
+      }
+    }
+    @media screen and (max-width:430px) {
+      #data{
+        width: 98%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="data">
+    <h1>User Data</h1>
+    <label>User Name
+      <input type="text" id="user-name" placeholder="Enter user name">
+    </label> <br>
+    <label>User Age
+      <input type="number" placeholder="Enter user age" id="user-age">
+    </label> <br>
+    <button onclick="store()">Submit</button>
+      <table>
+        <tr >
+          <th class="table-head">Name</th>
+          <th class="table-head">Age</th>
+        </tr>
+      </table>
+      <div id="retrieve">
+  
+      </div>
+    <button onclick="retrieve()">Retrieve User Data</button>
+  </div>
+</body>
+<script src="index.js"></script>
+</html>
